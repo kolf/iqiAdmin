@@ -1,6 +1,5 @@
 /* eslint-disable react/prefer-stateless-function */
 import React, { Suspense } from 'react';
-import { Button } from 'antd';
 // import api from '../../services'
 import Loading from '../../components/Loading/Loading';
 
@@ -10,7 +9,6 @@ class Analyze extends React.Component {
   render() {
     return (
       <Suspense fallback={<Loading />}>
-        <Button>dddddddddd</Button>
         <IntroduceRow />
       </Suspense>
     );

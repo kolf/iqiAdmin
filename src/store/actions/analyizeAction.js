@@ -8,9 +8,7 @@ export const interviewLoading = data => ({
 });
 
 export function modifyInterviewLoading(data) {
-  console.log(data);
   return dispatch => {
-    console.log('onnn');
     dispatch(interviewLoading(data));
   };
 }

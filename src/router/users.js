@@ -12,15 +12,5 @@ export default [
       loader: () => import('../pages/users/login'),
       loading: () => <Loading state />
     })
-  },
-  {
-    key: '2',
-    text: '注册',
-    path: '/register',
-    exact: true,
-    component: Loadable({
-      loader: () => import('../pages/users/register'),
-      loading: () => <Loading state />
-    })
   }
 ];

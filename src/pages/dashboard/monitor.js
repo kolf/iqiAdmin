@@ -3,7 +3,6 @@
 import React from 'react';
 import { Row, Col } from 'antd';
 import api from '../../services';
-import GridContent from '../../components/pageWrapper/gridContent';
 
 class Monitor extends React.Component {
   state = {
@@ -11,6 +10,7 @@ class Monitor extends React.Component {
   };
 
   async componentDidMount() {
+    console.log(api.dataAnalyize, 'api.dataAnalyize');
     const bardata = await api.dataAnalyize.getSaleData();
     console.log(bardata.payload, '----------');
     this.setState(() => ({
@@ -20,18 +20,17 @@ class Monitor extends React.Component {
 
   render() {
     return (
-      <GridContent>
-        <Row gutter={24}>
-          <Col
-            xl={18}
-            lg={24}
-            md={24}
-            sm={24}
-            xs={24}
-            style={{ marginBottom: 24 }}
-          />
-        </Row>
-      </GridContent>
+      <Row gutter={24}>
+        <Col
+          xl={18}
+          lg={24}
+          md={24}
+          sm={24}
+          xs={24}
+          style={{ marginBottom: 24 }}
+        />
+      </Row>
+
       // <Bar data={data} title="销售趋势" height={350} padding={50} />
     );
   }
