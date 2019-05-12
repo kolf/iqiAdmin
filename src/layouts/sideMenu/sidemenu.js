@@ -103,7 +103,7 @@ class SideMenu extends Component {
       <Sider breakpoint="lg" collapsed={collapsed}>
         <div className="wrap">
           <Avatar size={50} src={logo} shape="square" className="logo" />
-          {collapsed ? '' : <h1 className="name">Antd-React</h1>}
+          {collapsed ? '' : <h1 className="name">原厂零部件管理</h1>}
         </div>
 
         <Menu
